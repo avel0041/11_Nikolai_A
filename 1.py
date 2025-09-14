@@ -1,14 +1,19 @@
-from itertools import*
 k=0
-a = product('АБВГД', repeat = 5)
-for n in a:
-    v = ''.join(n)
-    if v[0]!='А' and 'АА' not in v and 'ББ' not in v and 'ВВ' not in v and 'ГГ' not in v and 'ДД' not in v:
+f = open('9(4).txt').readlines()
+for s in f:
+    b = s.split()
+    b = sorted(list(map(int,b)))
+    a = []
+    c=[]
+    z=[]
+    for x in b:
+        if b.count(x)==3:
+            print(1)
+            a.append(x)
+        if x%2==0:
+            c.append(x)
+        else:
+            z.append(x)
+    if len(set(a))==1 and len(z)<len(c) and (b[4]+b[5])>(sum(b)-(b[4]+b[5]))*2:
         k+=1
 print(k)
-
-def f(x):
-    for i in range(len(x)):
-        if x[i] != x[i+1]:
-
-
