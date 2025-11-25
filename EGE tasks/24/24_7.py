@@ -24,4 +24,11 @@ for s in f:
     if len(s)>mx:
         s1=s
         mx=len(s)
-print(mx,s1)
+print(mx)
+
+from re import*
+f=open('24_7.txt').readline()
+r=r'(?:[6789][06789]*|0)(?:[*-](?:[6789][06789]*|0))*'
+v=findall(r,f)
+b=max(v,key=len)
+print(len(b))

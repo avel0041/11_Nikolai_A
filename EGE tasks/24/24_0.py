@@ -15,3 +15,10 @@ for s in f:
 if k > k_max:
     k_max = k
 print(k_max)
+
+from re import*
+f = open('24_0.txt').readline()
+r = r'C+'
+v = findall(r, f)
+b = max(v, key=len)
+print(len(b))
